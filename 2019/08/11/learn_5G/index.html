@@ -16,7 +16,29 @@
   
   
   
-    <meta name="description" content>
+    <meta name="description" content="Learn 5GSMP管理流程：Preparation
+明确任务
+与TL沟通
+技术流程
+客户沟通
+
+Implementation:
+工作报告，进度
+存log，做备份
+工作流程
+问题处理
+
+Cutover：
+割接前准备
+割接后沟通
+
+Emergency:
+技术沟通
+客户沟通
+
+客户工作环境地点：港润酒店右手边24楼会议室A
+同事：4G，5G，IoT
+机器：电脑（贴标签的是做5G的），交换机在房...">
   
   <title>learn_5G [ mujiang ]</title>
   
@@ -36,6 +58,15 @@
 
 <body>
 <div class="side-navigate hide-area">
+  
+    <div class="item prev">
+      <a href="/2019/08/13/learn_git/">
+        <div class="item-icon"></div>
+      </a>
+      <div class="item-title">
+        learn_git
+      </div>
+    </div>
   
   
     <div class="item next">
@@ -142,19 +173,126 @@
       
     </p>
     
-    
+    <h3 id="Learn-5G"><a href="#Learn-5G" class="headerlink" title="Learn 5G"></a>Learn 5G</h3><h4 id="SMP管理流程："><a href="#SMP管理流程：" class="headerlink" title="SMP管理流程："></a>SMP管理流程：</h4><h5 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h5><ol>
+<li>明确任务</li>
+<li>与TL沟通</li>
+<li>技术流程</li>
+<li>客户沟通</li>
+</ol>
+<h6 id="Implementation"><a href="#Implementation" class="headerlink" title="Implementation:"></a>Implementation:</h6><ol>
+<li>工作报告，进度</li>
+<li>存log，做备份</li>
+<li>工作流程</li>
+<li>问题处理</li>
+</ol>
+<h5 id="Cutover："><a href="#Cutover：" class="headerlink" title="Cutover："></a>Cutover：</h5><ol>
+<li>割接前准备</li>
+<li>割接后沟通</li>
+</ol>
+<h5 id="Emergency"><a href="#Emergency" class="headerlink" title="Emergency:"></a>Emergency:</h5><ol>
+<li>技术沟通</li>
+<li>客户沟通</li>
+</ol>
+<h4 id="客户工作环境"><a href="#客户工作环境" class="headerlink" title="客户工作环境"></a>客户工作环境</h4><p>地点：港润酒店右手边24楼会议室A</p>
+<p>同事：4G，5G，IoT</p>
+<p>机器：电脑（贴标签的是做5G的），交换机在房间的角落。</p>
+<h3 id="Moshell"><a href="#Moshell" class="headerlink" title="Moshell"></a>Moshell</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">moshell  XXX.zip   #打开log</span><br><span class="line"></span><br><span class="line">invrx		#显示硬件信息</span><br><span class="line">invl		#显示功能</span><br><span class="line"></span><br><span class="line">lt all		#显示MO Tree</span><br><span class="line">cvls		#显示eNodeB软件和CV</span><br><span class="line">al			#显示eNodeB上的警告</span><br><span class="line">invh		#显示feature license</span><br><span class="line"></span><br><span class="line">bl			#lock</span><br><span class="line">deb			#unlock</span><br><span class="line">get			#得到详细信息</span><br><span class="line">set 		#改变属性</span><br><span class="line"></span><br><span class="line">acc			#用于执行，重启RRU</span><br></pre></td></tr></table></figure>
+
+<h4 id="5G-RAN-System"><a href="#5G-RAN-System" class="headerlink" title="5G RAN System"></a>5G RAN System</h4><ul>
+<li>OFDMA</li>
+<li>NSA/SA</li>
+<li>5GC/NextGen Core</li>
+<li>option 3 ： EPC+ LTE/NR</li>
+<li>gNB</li>
+<li>Tx，Rx</li>
+<li>LDPC码：时延更小</li>
+</ul>
+<p><a href="https://www.jiaheu.com/topic/470866.html" target="_blank" rel="noopener">5G介绍</a></p>
+<h4 id="基站"><a href="#基站" class="headerlink" title="基站"></a>基站</h4><ul>
+<li>BBU基带处理单元 building base band unit ：信号调制</li>
+<li>RRU射频拉远单元remote radio unit：射频处理</li>
+<li>馈线：连接RRU和天线</li>
+<li>天线</li>
+</ul>
+<p>发展：</p>
+<ol>
+<li>最开始BBU，RRU，打包到一个柜子里的</li>
+<li>RRU，BBU挂在墙上，放在机柜里</li>
+<li>RRU搬到天线附近，称之为RRU拉远   天线+RRU  D-RAN（分布式无线接入网）</li>
+<li>把BBU全部集中，变成一个BBU基带池，关在中心机房（CO）</li>
+<li>共享数据，小区协作（CoMP），提高频谱效率，提升用户感知</li>
+<li>多点协作传输（CoMP），PDSCH为终端数据传输，PUSCH联合接收终端发送数据</li>
+<li>NFV（网元功能虚拟化）：用X86服务器，装个虚拟机，运行具备BBU功能的软件</li>
+<li>CU，DU，AAU</li>
+<li>EPC被分为5GC和MEC（移动网络边界计算平台）</li>
+<li>下沉：MEU移动到与CU一起</li>
+<li>切片：不同逻辑网络——网元重构，连接灵活变化</li>
+</ol>
+<h4 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h4><p>OFDMA：</p>
+<p><a href="https://blog.csdn.net/madongchunqiu/article/details/18614233" target="_blank" rel="noopener">小白教程</a></p>
+<ul>
+<li>子载波间隔：LTE只有15kHZ，5G有15，30，60，120，240</li>
+<li>子载波：asin(t)+bsin(2t)   a和b才是要发送的信息。  在接收机乘以sin(t) ，得到a</li>
+<li>同步难以实现，时延会影响载波的正交性，所以OFDM在时域上难以实现</li>
+<li>OFDM以FFT实现，离散傅里叶变换</li>
+<li>OFDM传输的是频域信号</li>
+<li>频域来看，子载波间隔越靠近，频谱利用率越高，靠近到彼此正交，然而没有互相干扰（采用的技术是正交，而不是带通滤波器）</li>
+<li>OFDM达到了理想信道的频带利用率</li>
+<li>​</li>
+</ul>
+<ul>
+<li>子载波空间：从频域观察，12个小山，12个子载波</li>
+<li>frame（帧，10ms），subframe（子帧，1ms），slot（时隙）</li>
+<li>BWP：基带部分</li>
+<li>TDD：UL-DL  Uplink  Downlink</li>
+<li>5G NR： LDPC，Polar</li>
+<li>LTE：Turbo</li>
+</ul>
+<h4 id="应用场景："><a href="#应用场景：" class="headerlink" title="应用场景："></a>应用场景：</h4><ul>
+<li>超高速（eMBB）</li>
+<li>超低时延（URLLC）</li>
+<li>物联（mMTC）</li>
+</ul>
+<h4 id="Massive-MIMO"><a href="#Massive-MIMO" class="headerlink" title="Massive MIMO"></a>Massive MIMO</h4><ul>
+<li>最早用于TDD，随后被应用于FDD</li>
+<li>SU-MIMO：single-user MIMO</li>
+<li>MU=MIMO：Multi-user MIMO</li>
+<li>Cell shaping</li>
+<li>AAS：Advanced Antenna system      name:AIR</li>
+<li>CPRI：通用公共无线电接口</li>
+<li>DU：分布单元</li>
+<li>CU：集中单元</li>
+<li>AAU：active antenna unit 有源天线单元</li>
+</ul>
+<h4 id="Massive-MIMO-and-Beamforming-in-5G"><a href="#Massive-MIMO-and-Beamforming-in-5G" class="headerlink" title="Massive MIMO and Beamforming in 5G"></a>Massive MIMO and Beamforming in 5G</h4><ul>
+<li>LTE是4天线，4G是8天线</li>
+<li>CRS，最多4X4            小区参考信号</li>
+<li>SU-MIMO：提升用户速率</li>
+<li>MU-MIMO：提升用户数量</li>
+<li>5G中这两种方法都存在</li>
+<li>LTE：天线，天线端口（逻辑概念）</li>
+<li>空间复用不提高容量</li>
+<li>闭环：报告完送上来，慢速，精度高，CSI反馈，RI,CQI，PMI</li>
+<li>开环：高速移动</li>
+<li>CSI</li>
+<li>R10：4G</li>
+<li>​</li>
+</ul>
+
   </article>
   <div class="random-toc-area">
   <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">Show TOC</button>
   <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">Hide TOC</button>
   <div class="random-toc">
     <h2>Table of Content</h2>
-    
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Learn-5G"><span class="toc-text">Learn 5G</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#SMP管理流程："><span class="toc-text">SMP管理流程：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Preparation"><span class="toc-text">Preparation</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#Implementation"><span class="toc-text">Implementation:</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Cutover："><span class="toc-text">Cutover：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Emergency"><span class="toc-text">Emergency:</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#客户工作环境"><span class="toc-text">客户工作环境</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Moshell"><span class="toc-text">Moshell</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5G-RAN-System"><span class="toc-text">5G RAN System</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#基站"><span class="toc-text">基站</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#物理层"><span class="toc-text">物理层</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#应用场景："><span class="toc-text">应用场景：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Massive-MIMO"><span class="toc-text">Massive MIMO</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Massive-MIMO-and-Beamforming-in-5G"><span class="toc-text">Massive MIMO and Beamforming in 5G</span></a></li></ol></li></ol>
   </div>
 </div>
 
   
 <nav id="pagination">
+  
+    <a href="/2019/08/13/learn_git/" class="prev">&larr; Prev post learn_git</a>
   
 
   

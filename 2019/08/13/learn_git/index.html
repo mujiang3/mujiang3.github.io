@@ -1,0 +1,329 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="author" content="mujiang3">
+  
+  
+  
+  
+    <meta name="description" content="learn_git仓库分区：
+
+工作区
+暂存区
+版本区
+
+基本操作：123456git add .git commit -m &quot;add file&quot;git pushgit init #将本地项目上传到github，挺麻烦的，不如直接在网站新建仓库再git clone
+
+git 命令：1234567891011121314151617181920git config --gl...">
+  
+  <title>learn_git [ mujiang ]</title>
+  
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+  <link rel="stylesheet" href="/css/random.css">
+<link rel="stylesheet" href="/css/vegas.min.css">
+<link rel="stylesheet" href="/css/highlight-railscasts.css">
+<link rel="stylesheet" href="/css/jquery.fancybox.css">
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+<link rel="stylesheet" href="/css/jquery.fancybox-thumbs.css">
+<link rel="stylesheet" href="/css/plyr.css">
+  
+</head>
+
+<body>
+<div class="side-navigate hide-area">
+  
+  
+    <div class="item next">
+      <a href="/2019/08/11/learn_5G/">
+        <div class="item-icon"></div>
+      </a>
+      <div class="item-title">
+        learn_5G
+      </div>
+    </div>
+  
+</div>
+<div id="outer-container" class="hide-area">
+<div id="container">
+  <div id="menu-outer" class="slide-down">
+    <div id="menu-inner">
+      <div id="brand">
+        
+        <a onclick="openUserCard()">
+          <img id="avatar" src="/mujiang.jpg">
+          <div id="homelink">mujiang</div>
+        </a>
+      </div>
+      <div id="menu-list">
+        <ul>
+        
+        
+          
+            <li>
+          
+            <a href="/index.html">Home</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="/archives">Archives</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="/tags">Tags</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="/categories">Categories</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="https://github.com/mujiang3">Github</a>
+            
+          </li>
+        
+        </ul>
+      </div>
+      <div id="show-menu">
+        <button>Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="content-outer">
+    <div id="content-inner">
+      
+      
+  
+
+  <article id="post">
+    <h1>learn_git</h1>
+    <p class="page-title-sub">
+      <span id="post-title-date">Created at 2019-08-13</span>
+      
+        <span id="post-title-updated">Updated at 2019-08-13</span>
+      
+      
+      <span id="post-title-categories">Category
+      
+      
+        
+        
+        <a href="/categories/tool/">tool</a>
+      
+      </span>
+      
+      
+      <span id="post-title-tags">
+      Tag
+      
+      
+        
+        
+        <a href="/tags/tool/">tool</a>
+      
+      </span>
+      
+    </p>
+    
+    <h1 id="learn-git"><a href="#learn-git" class="headerlink" title="learn_git"></a>learn_git</h1><p>仓库分区：</p>
+<ul>
+<li>工作区</li>
+<li>暂存区</li>
+<li>版本区</li>
+</ul>
+<h4 id="基本操作："><a href="#基本操作：" class="headerlink" title="基本操作："></a>基本操作：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;add file&quot;</span><br><span class="line">git push</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">git init #将本地项目上传到github，挺麻烦的，不如直接在网站新建仓库再git clone</span><br></pre></td></tr></table></figure>
+
+<h4 id="git-命令："><a href="#git-命令：" class="headerlink" title="git 命令："></a>git 命令：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;420538167@qq.com&quot;</span><br><span class="line">git config --global user.name &quot;mujiang3&quot;</span><br><span class="line">git config -l		#查看配置信息</span><br><span class="line">git status		#查看当前仓库状态</span><br><span class="line"></span><br><span class="line">git add	one.txt		#将文件添加到暂存区</span><br><span class="line">git add .		#将全部修改添加到暂存区</span><br><span class="line"></span><br><span class="line">git commit -m &quot;commit file one.txt&quot;  #提交，并注释</span><br><span class="line">git push		#将本地仓库master分支上的新增提交推送到远程仓库中的同名分支上去</span><br><span class="line"></span><br><span class="line">git reset -- one.txt	#撤销暂存区的修改</span><br><span class="line">git reset --		#把暂存区的所有修改撤销</span><br><span class="line"></span><br><span class="line">git diff		#查看工作区被跟踪文件的修改详情，按Q退出该页面</span><br><span class="line">git diff --cached		#查看暂存区的全部修改</span><br><span class="line"></span><br><span class="line">git log		#查看版本区提交记录</span><br><span class="line">git log -n		#显示最近n个提交</span><br><span class="line">git log --graph		#图示提交历史</span><br></pre></td></tr></table></figure>
+
+<h4 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="git标签"><a href="#git标签" class="headerlink" title="git标签"></a>git标签</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag v1.0 -m &quot;release 1.0&quot;</span><br></pre></td></tr></table></figure>
+
+
+  </article>
+  <div class="random-toc-area">
+  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">Show TOC</button>
+  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">Hide TOC</button>
+  <div class="random-toc">
+    <h2>Table of Content</h2>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#learn-git"><span class="toc-text">learn_git</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#基本操作："><span class="toc-text">基本操作：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-命令："><span class="toc-text">git 命令：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#分支操作"><span class="toc-text">分支操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git标签"><span class="toc-text">git标签</span></a></li></ol></li></ol>
+  </div>
+</div>
+
+  
+<nav id="pagination">
+  
+
+  
+
+  
+    <a href="/2019/08/11/learn_5G/" class="next">Next post learn_5G &rarr;</a>
+  
+</nav>
+
+  <!-- JiaThis Button BEGIN -->
+
+<!-- JiaThis Button END -->
+
+
+      
+      
+    </div>
+  </div>
+
+  <div id="bottom-outer">
+    <div id="bottom-inner">
+      Site by mujiang3 using
+      <a href="http://hexo.io">Hexo</a> & <a href="https://github.com/stiekel/hexo-theme-random">Random</a>
+      <br>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+<div id="user-card">
+  <div class="center-field">
+    <img class="avatar" src="/mujiang.jpg">
+    <p id="description"></p>
+    <ul class="social-icon">
+  
+  
+</ul>
+  </div>
+</div>
+
+
+<div id="btn-view">Hide</div>
+
+<script>
+// is trigger analytics / tongji script
+var isIgnoreHost = false;
+
+if(window && window.location && window.location.host) {
+  isIgnoreHost = ["localhost","127.0.0.1"].some(function(address){
+    return 0 === window.location.host.indexOf(address);
+  });
+}
+
+var isTriggerAnalytics = !( true && isIgnoreHost );
+
+</script>
+
+
+
+
+  
+  
+    <script src="/js/jquery-2.2.3.min.js"></script>
+  
+    <script src="/js/vegas.min.js"></script>
+  
+    <script src="/js/random.js"></script>
+  
+    <script src="/js/highlight.pack.js"></script>
+  
+    <script src="/js/jquery.mousewheel.pack.js"></script>
+  
+    <script src="/js/jquery.fancybox.pack.js"></script>
+  
+    <script src="/js/jquery.fancybox-thumbs.js"></script>
+  
+    <script src="/js/plyr.js"></script>
+  
+
+<script>
+
+  // fancybox
+  var backgroundImages = [];
+  
+  $('#post').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox') || $(this).parent().hasClass('fancybox-thumb')) return;
+      var alt = this.alt || this.title;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'post' + i);
+    });
+  });
+  $(".fancybox").fancybox();
+
+var vegasConfig = {"preload­Image":true,"transition":["flash"],"timer":true,"delay":1500000,"shuffle":true,"count":12};
+var unsplashConfig = {"gravity":"center"};
+// is show background images
+var turnoffBackgroundImage = false;
+
+
+
+
+var backgroundColor = "34495E";
+
+$(".fancybox-thumb").fancybox({
+  prevEffect: 'none',
+  nextEffect: 'none',
+  helpers: {
+    title: {
+      type: 'outside'
+    },
+    thumbs: {
+      width: 50,
+      height: 50
+    }
+  }
+});
+
+// show video with plyr
+$(".video-container iframe").each(function(i){
+  var url = $(this).attr('src');
+  var id = url.split('/').pop();
+  var plyrContainer = document.createElement('div');
+  plyrContainer.className = 'plyr';
+  var plyrElement = document.createElement('div');
+  plyrElement.dataset.videoId = id;
+  switch(true) {
+    case url.search('youtube.com') >= 0:
+      plyrElement.dataset.type = 'youtube';
+      break;
+    case url.search('vimeo.com') >= 0:
+      plyrElement.dataset.type = 'vimeo';
+      break;
+    default:
+      return;
+  };
+  plyrContainer.appendChild(plyrElement);
+  $(this).parent().html(plyrContainer);
+});
+plyr.setup('.plyr', {iconUrl: '/css/sprite.svg'});
+</script>
+</body>
+</html>
+
