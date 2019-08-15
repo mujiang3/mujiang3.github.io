@@ -16,9 +16,15 @@
   
   
   
-    <meta name="description" content>
+    <meta name="description" content="learn_git仓库分区：
+
+工作区
+暂存区
+版本区
+
+基本操作：12345678910git add .git commit -m &quot;add file&quot;git pushgit init #将本地项目上传到github，挺麻烦的，不如直接在网站新建仓库再git clonegit clone XXX #先clone到本地之后才能删除文件或者文件夹git rm a.txt ...">
   
-  <title>learn_eng [ mujiang ]</title>
+  <title>learn_git [ mujiang ]</title>
   
   
     <link rel="shortcut icon" href="/favicon.ico">
@@ -37,22 +43,13 @@
 <body>
 <div class="side-navigate hide-area">
   
-    <div class="item prev">
+  
+    <div class="item next">
       <a href="/2019/08/11/learn_5G/">
         <div class="item-icon"></div>
       </a>
       <div class="item-title">
         learn_5G
-      </div>
-    </div>
-  
-  
-    <div class="item next">
-      <a href="/2019/08/11/learn_linux/">
-        <div class="item-icon"></div>
-      </a>
-      <div class="item-title">
-        学习Linux
       </div>
     </div>
   
@@ -122,11 +119,11 @@
   
 
   <article id="post">
-    <h1>learn_eng</h1>
+    <h1>learn_git</h1>
     <p class="page-title-sub">
-      <span id="post-title-date">Created at 2019-08-11</span>
+      <span id="post-title-date">Created at 2019-08-13</span>
       
-        <span id="post-title-updated">Updated at 2019-08-11</span>
+        <span id="post-title-updated">Updated at 2019-08-15</span>
       
       
       <span id="post-title-categories">Category
@@ -134,7 +131,7 @@
       
         
         
-        <a href="/categories/eng/">eng</a>
+        <a href="/categories/tool/">tool</a>
       
       </span>
       
@@ -145,33 +142,45 @@
       
         
         
-        <a href="/tags/eng/">eng</a>
+        <a href="/tags/tool/">tool</a>
       
       </span>
       
     </p>
     
-    
+    <h1 id="learn-git"><a href="#learn-git" class="headerlink" title="learn_git"></a>learn_git</h1><p>仓库分区：</p>
+<ul>
+<li>工作区</li>
+<li>暂存区</li>
+<li>版本区</li>
+</ul>
+<h4 id="基本操作："><a href="#基本操作：" class="headerlink" title="基本操作："></a>基本操作：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;add file&quot;</span><br><span class="line">git push</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">git init #将本地项目上传到github，挺麻烦的，不如直接在网站新建仓库再git clone</span><br><span class="line"></span><br><span class="line">git clone XXX #先clone到本地之后才能删除文件或者文件夹</span><br><span class="line">git rm a.txt #删除文件</span><br><span class="line">git rm -r a  #删除文件夹</span><br></pre></td></tr></table></figure>
+
+<h4 id="git-命令："><a href="#git-命令：" class="headerlink" title="git 命令："></a>git 命令：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;420538167@qq.com&quot;</span><br><span class="line">git config --global user.name &quot;mujiang3&quot;</span><br><span class="line">git config -l		#查看配置信息</span><br><span class="line">git status		#查看当前仓库状态</span><br><span class="line"></span><br><span class="line">git add	one.txt		#将文件添加到暂存区</span><br><span class="line">git add .		#将全部修改添加到暂存区</span><br><span class="line"></span><br><span class="line">git commit -m &quot;commit file one.txt&quot;  #提交，并注释</span><br><span class="line">git push		#将本地仓库master分支上的新增提交推送到远程仓库中的同名分支上去</span><br><span class="line"></span><br><span class="line">git reset -- one.txt	#撤销暂存区的修改</span><br><span class="line">git reset --		#把暂存区的所有修改撤销</span><br><span class="line"></span><br><span class="line">git diff		#查看工作区被跟踪文件的修改详情，按Q退出该页面</span><br><span class="line">git diff --cached		#查看暂存区的全部修改</span><br><span class="line"></span><br><span class="line">git log		#查看版本区提交记录</span><br><span class="line">git log -n		#显示最近n个提交</span><br><span class="line">git log --graph		#图示提交历史</span><br></pre></td></tr></table></figure>
+
+<h4 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="git标签"><a href="#git标签" class="headerlink" title="git标签"></a>git标签</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git tag v1.0 -m &quot;release 1.0&quot;</span><br></pre></td></tr></table></figure>
+
+
   </article>
   <div class="random-toc-area">
   <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">Show TOC</button>
   <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">Hide TOC</button>
   <div class="random-toc">
     <h2>Table of Content</h2>
-    
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#learn-git"><span class="toc-text">learn_git</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#基本操作："><span class="toc-text">基本操作：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-命令："><span class="toc-text">git 命令：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#分支操作"><span class="toc-text">分支操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git标签"><span class="toc-text">git标签</span></a></li></ol></li></ol>
   </div>
 </div>
 
   
 <nav id="pagination">
   
-    <a href="/2019/08/11/learn_5G/" class="prev">&larr; Prev post learn_5G</a>
-  
 
   
 
   
-    <a href="/2019/08/11/learn_linux/" class="next">Next post 学习Linux &rarr;</a>
+    <a href="/2019/08/11/learn_5G/" class="next">Next post learn_5G &rarr;</a>
   
 </nav>
 

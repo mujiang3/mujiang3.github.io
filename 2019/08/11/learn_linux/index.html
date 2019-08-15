@@ -1,0 +1,362 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="author" content="mujiang3">
+  
+  
+  
+  
+    <meta name="description" content="learn_linuxShell 命令12345678910111213141516171819202122232425262728293031323334353637383940#用来写注释man  #获取帮助man 1 ls #显示第一页的ls命令的帮助文档ls --helppwd   #查看当前所在目录cd /etc/  #进入一个目录cd ..  #返回上一级目录   ..之前要有空...">
+  
+  <title>学习Linux [ mujiang ]</title>
+  
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+  <link rel="stylesheet" href="/css/random.css">
+<link rel="stylesheet" href="/css/vegas.min.css">
+<link rel="stylesheet" href="/css/highlight-railscasts.css">
+<link rel="stylesheet" href="/css/jquery.fancybox.css">
+<link rel="stylesheet" href="/css/iconfont/iconfont.css">
+<link rel="stylesheet" href="/css/jquery.fancybox-thumbs.css">
+<link rel="stylesheet" href="/css/plyr.css">
+  
+</head>
+
+<body>
+<div class="side-navigate hide-area">
+  
+    <div class="item prev">
+      <a href="/2019/08/11/learn_eng/">
+        <div class="item-icon"></div>
+      </a>
+      <div class="item-title">
+        learn_eng
+      </div>
+    </div>
+  
+  
+    <div class="item next">
+      <a href="/2019/08/10/learn_html/">
+        <div class="item-icon"></div>
+      </a>
+      <div class="item-title">
+        HTML基本语法
+      </div>
+    </div>
+  
+</div>
+<div id="outer-container" class="hide-area">
+<div id="container">
+  <div id="menu-outer" class="slide-down">
+    <div id="menu-inner">
+      <div id="brand">
+        
+        <a onclick="openUserCard()">
+          <img id="avatar" src="/mujiang.jpg">
+          <div id="homelink">mujiang</div>
+        </a>
+      </div>
+      <div id="menu-list">
+        <ul>
+        
+        
+          
+            <li>
+          
+            <a href="/index.html">Home</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="/archives">Archives</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="/tags">Tags</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="/categories">Categories</a>
+            
+          </li>
+        
+          
+            <li>
+          
+            <a href="https://github.com/mujiang3">Github</a>
+            
+          </li>
+        
+        </ul>
+      </div>
+      <div id="show-menu">
+        <button>Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="content-outer">
+    <div id="content-inner">
+      
+      
+  
+
+  <article id="post">
+    <h1>学习Linux</h1>
+    <p class="page-title-sub">
+      <span id="post-title-date">Created at 2019-08-11</span>
+      
+        <span id="post-title-updated">Updated at 2019-08-11</span>
+      
+      
+      <span id="post-title-categories">Category
+      
+      
+        
+        
+        <a href="/categories/tool/">tool</a>
+      
+      </span>
+      
+      
+      <span id="post-title-tags">
+      Tag
+      
+      
+        
+        
+        <a href="/tags/tool/">tool</a>
+      
+      </span>
+      
+    </p>
+    
+    <h1 id="learn-linux"><a href="#learn-linux" class="headerlink" title="learn_linux"></a>learn_linux</h1><h4 id="Shell-命令"><a href="#Shell-命令" class="headerlink" title="Shell 命令"></a>Shell 命令</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">#用来写注释</span><br><span class="line"></span><br><span class="line">man  #获取帮助</span><br><span class="line">man 1 ls #显示第一页的ls命令的帮助文档</span><br><span class="line">ls --help</span><br><span class="line"></span><br><span class="line">pwd   #查看当前所在目录</span><br><span class="line">cd /etc/  #进入一个目录</span><br><span class="line">cd ..  #返回上一级目录   ..之前要有空格</span><br><span class="line">cd ~ #进入home目录</span><br><span class="line"></span><br><span class="line">touch file #创建一个名为file的文件</span><br><span class="line">touch love_&#123;1..10&#125;_linux.txt  #创建10个文件 love_1_linux.txt 只能用两个省略号  三个就不行</span><br><span class="line">cat   READE.md  #一次显示整个文件</span><br><span class="line">df		#查看磁盘容量</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Tab  #补全命令</span><br><span class="line">Ctrl + c  #强行终止当前命令</span><br><span class="line">Ctrl + d #键盘输入结束或者退出终端</span><br><span class="line">Ctrl + s #暂停当前程序，暂停后按任意键恢复运行</span><br><span class="line">Ctrl + z # 将当前程序放到后台运行</span><br><span class="line">#方向键上，下  可恢复之前写的命令</span><br><span class="line"></span><br><span class="line">ls *.txt     #通配符*</span><br><span class="line"></span><br><span class="line">echo &quot;Hello,world.&quot;  #返回一个Hello,world.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#例行工作进程crontab</span><br><span class="line">#定时运行</span><br><span class="line"></span><br><span class="line">#命令执行顺序</span><br><span class="line">sudo apt-get update;sudo apt-get install some-tool;some-tool</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#管道：前面的输出作为下一个进程的输入</span><br><span class="line">ls -al /etc |less</span><br><span class="line"></span><br><span class="line">#重定向</span><br></pre></td></tr></table></figure>
+
+<p>一个有趣的linux命令：<br>输出图形字符banner</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install sysvbanner</span><br><span class="line">banner shiyanlou</span><br></pre></td></tr></table></figure>
+
+<p>终端（terminal）<br>控制台（console）</p>
+<h3 id="用户及文件权限"><a href="#用户及文件权限" class="headerlink" title="用户及文件权限"></a>用户及文件权限</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">who am i  # 显示当前伪终端用户名</span><br><span class="line"></span><br><span class="line">root权限</span><br><span class="line"></span><br><span class="line">sudo adduser brucelee  #新建一个用户brucelee</span><br><span class="line">su -l brucelee  #切换登录用户</span><br><span class="line">exit    #退出当前用户</span><br><span class="line">ctrl+d  #退出当前用户</span><br><span class="line"></span><br><span class="line">groups shiyanlou  #查看自己的用户组</span><br><span class="line">sudo deluser brucelee --remove-home  #删除用户</span><br><span class="line"></span><br><span class="line"># 添加用户，删除用户 </span><br><span class="line"></span><br><span class="line">ls -l  #使用较长格式列出文件</span><br><span class="line">ls -A #显示所有文件，包括隐藏文件</span><br><span class="line">ls -Al</span><br><span class="line">ls -AsSh  #显示所有文件大小</span><br><span class="line"></span><br><span class="line">### Linux中一切皆文件    </span><br><span class="line">- socket </span><br><span class="line">- pipe </span><br><span class="line">- 软链接</span><br></pre></td></tr></table></figure>
+
+<h3 id="Linux目录结构："><a href="#Linux目录结构：" class="headerlink" title="Linux目录结构："></a>Linux目录结构：</h3><p>Windows：以存储介质为主，用C盘D盘这些来实现文件管理，然后才是目录，目录没那么重要</p>
+<p>Linux：以目录为主，树形目录结构，只有一个根目录</p>
+<p>FHS（文件系统层次结构）标准：</p>
+<p>第一层规范：</p>
+<ul>
+<li>各个目录应该放什么文件</li>
+<li>/etc  放置设置文件</li>
+<li>/bin 与 /sbin  放置可执行文件</li>
+</ul>
+<p>第二层规范：</p>
+<ul>
+<li>针对/user和/var的子目录</li>
+<li>/var/log 放置系统登录文件</li>
+<li>/user/share  放置共享文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">tree /   #显示树形结构</span><br><span class="line"></span><br><span class="line">pwd   #查看当前所在目录</span><br><span class="line">cd /etc/  #进入一个目录</span><br><span class="line">cd ..  #返回上一级目录   ..之前要有空格</span><br><span class="line">cd ~ #进入home目录</span><br><span class="line"></span><br><span class="line">cd /bin  #绝对路径</span><br><span class="line">cd ../bin   #相对路径</span><br></pre></td></tr></table></figure>
+
+<h3 id="文件操作："><a href="#文件操作：" class="headerlink" title="文件操作："></a>文件操作：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">touch test   #创建新文件</span><br><span class="line">touch file&#123;1..10&#125;.txt   #批量创建</span><br><span class="line"></span><br><span class="line">mkdir       #创建空目录</span><br><span class="line">mkdir -p father/son/grandson    # -p参数，同时创建多级目录  用于安装软件，配置安装路径</span><br><span class="line"></span><br><span class="line">cp test father/son/grandson  #把test文件复制到目录下</span><br><span class="line">cp -r father family   #复制目录，要加上 -r 参数</span><br><span class="line"></span><br><span class="line">rm test  #删除一个文件</span><br><span class="line">rm -f test  #强制删除一个文件</span><br><span class="line">rm -r family  #删除目录</span><br><span class="line"></span><br><span class="line">mv file1 Documents  #   mv  源文件目录  目的目录</span><br><span class="line">mv file1 myfile  #将“file1”重命名为“myfile”</span><br><span class="line"></span><br><span class="line">cat    #查看文件 ，正序显示</span><br><span class="line">tac  #查看文件，倒序显示</span><br><span class="line">nl  #添加行号并打印   </span><br><span class="line">more passwd  #more命令打开passwd文件</span><br><span class="line">head  #查看头几行</span><br><span class="line">tail     #查看尾几行</span><br><span class="line">file   #查看文件类型</span><br></pre></td></tr></table></figure>
+
+<h3 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">declare tmp</span><br><span class="line">tmp=shiyanlou  # = 前后不能有空格</span><br><span class="line">echo $tmp</span><br><span class="line"></span><br><span class="line">set  #显示当前shell所有变量</span><br><span class="line">env  #显示与当前用户相关的环境变量</span><br><span class="line"></span><br><span class="line">echo $path </span><br><span class="line">PATH=$PATH:/home/shiyanlou/mybin</span><br></pre></td></tr></table></figure>
+
+<h3 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h3><h3 id="BASH语言"><a href="#BASH语言" class="headerlink" title="BASH语言"></a>BASH语言</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim hello.sh  #</span><br><span class="line">sh hello.sh</span><br><span class="line">bash hello.sh</span><br><span class="line">. ./hello.sh  #  . . 中间有空格</span><br></pre></td></tr></table></figure>
+
+<h3 id="C语言编程"><a href="#C语言编程" class="headerlink" title="C语言编程"></a>C语言编程</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#编辑</span><br><span class="line">#编译：生成.o文件 </span><br><span class="line">#链接</span><br><span class="line">#执行</span><br><span class="line">touch 1-1.c</span><br><span class="line">gedit 1-1.c  #gedit是一个春文本编辑器，开始编写代码</span><br><span class="line">gcc -o 1-1 1-1.c  #调用编辑器GCC进行编译，形成可执行文件1-1</span><br><span class="line">./1-1   #执行文件</span><br><span class="line"></span><br><span class="line">printf(&quot;%d&quot;, a);  // 注释</span><br><span class="line">scanf(&quot;a=%d&quot;,&amp;a); </span><br><span class="line"></span><br><span class="line">char a = &apos;c&apos;; //字符型，C语言中没有字符串常量，需要使用字符数组</span><br><span class="line">putchar(a);   //输出一个字符</span><br><span class="line">a = getchar();  //输入一个字符</span><br><span class="line"></span><br><span class="line">int student[10]= &#123;0，1，2，3&#125;;  //数组</span><br><span class="line">int a[3][4]=&#123;&#123;1,2,3&#125;,&#123;4,5,6&#125;&#125;;  //二维数组</span><br><span class="line">char c[10]=&#123;&apos;T&apos;,&apos;R&apos;&#125;;  //字符数组   &apos;\0&apos;为结束字符</span><br><span class="line">gets(c);   //输入</span><br><span class="line">puts(c);   //输出</span><br><span class="line"></span><br><span class="line">//函数</span><br><span class="line"></span><br><span class="line">//指针</span><br><span class="line">int a = 10;</span><br><span class="line">int *p = &amp;a;</span><br><span class="line"></span><br><span class="line">//文件</span><br><span class="line">fopen(&quot;a1&quot;,&quot;r&quot;);  //打开名字为a1的文件，打开方式为读入，双引号</span><br><span class="line">fclose(fp);   //fp为指向文件的指针</span><br></pre></td></tr></table></figure>
+
+<h3 id="Vim编辑器"><a href="#Vim编辑器" class="headerlink" title="Vim编辑器"></a>Vim编辑器</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">vimtutor #官方vim教程</span><br><span class="line"></span><br><span class="line">vim practice_1.txt  #打开或者新建一个文件</span><br><span class="line"></span><br><span class="line">i   #按i键进入插入模式，可以输入文本</span><br><span class="line">esc   #按esc键进入普通模式，出现光标，hl左右，kj上下</span><br><span class="line">#普通模式下有快捷键可以在指定位置输入</span><br><span class="line">普通模式下</span><br><span class="line">： #进入命令行，输入w+enter保存文件</span><br><span class="line">：wq!  #强制保存并推出</span><br><span class="line">：x    #保存并推出</span><br><span class="line">x   #删除游标所在字符</span><br><span class="line">dd  #删除整行</span><br><span class="line">d^  #删除至行首</span><br><span class="line">ctrl+o  #回到之前位置</span><br><span class="line">yy #复制整行</span><br><span class="line">yw #复制一个单词</span><br><span class="line">p  #粘贴</span><br><span class="line"></span><br><span class="line">rb #将其他字符替换为b</span><br><span class="line">&gt;&gt;  #向右缩进</span><br><span class="line">:set shiftwidth=10    #设置缩进为10个字符</span><br><span class="line">:ce   #本行内容居中</span><br><span class="line">/DD   #查找DD字符串，输入n查找下一个DD</span><br><span class="line"></span><br><span class="line">:new   #打开一个新的vim视图</span><br><span class="line">:!ls   #显示当前目录内容</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 安装应用程序</span><br><span class="line"></span><br><span class="line">#安装MySQL</span><br><span class="line">sudo apt-get install mysql-server</span><br><span class="line">sudo apt-get install mysql-client</span><br><span class="line">sudo netstat -tap | grep mysql</span><br><span class="line"></span><br><span class="line">sudo service mysql start</span><br><span class="line">mysql -u root</span><br></pre></td></tr></table></figure>
+
+<p>学习资料：<br>安装Linux：<br>鸟叔的Linux私房菜：<br><a href="http://linux.vbird.org/linux_basic/0110whatislinux.php" target="_blank" rel="noopener">http://linux.vbird.org/linux_basic/0110whatislinux.php</a></p>
+<p>学习资料：<br><a href="https://zhuanlan.zhihu.com/p/21723250" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/21723250</a></p>
+<p>安装Linux：<a href="https://www.zhihu.com/question/27771736" target="_blank" rel="noopener">https://www.zhihu.com/question/27771736</a><br>用户名：brucelee</p>
+<p>Ubuntu使用手册：<a href="http://tieba.baidu.com/p/2922551924" target="_blank" rel="noopener">http://tieba.baidu.com/p/2922551924</a></p>
+<p>怎么切换为中文输入法？<br><a href="http://jingyan.baidu.com/article/bad08e1ef4b2f109c85121b7.html" target="_blank" rel="noopener">http://jingyan.baidu.com/article/bad08e1ef4b2f109c85121b7.html</a></p>
+<p>安装 Anaconda3:  <a href="http://blog.csdn.net/u012318074/article/details/7074665" target="_blank" rel="noopener">http://blog.csdn.net/u012318074/article/details/7074665</a><br>安装下载时候：downloads用中文“下载”来cd</p>
+<p>Linux循环登录问题：<br>是在安装NVIDIA的GPU之后出现的，一般来说是显卡的问题，权限的问题<br><a href="http://www.jianshu.com/p/d45434f28ca0" target="_blank" rel="noopener">http://www.jianshu.com/p/d45434f28ca0</a><br>GPU是显卡的核心<br>假如你还没有添加显卡驱动的软件源的话，使用如下方式进行安装：<br>sudo add-apt-repository ppa:graphics-drivers/ppa<br>sudo apt-get update<br>下面开始正文<br>sudo apt-get remove –purge nvidia-*<br>sudo apt-get autoremove #特别重要<br>sudo apt-get install -f #特别重要<br>sudo reboot</p>
+<p>通过这个解决了，能登录上了。</p>
+<p><a href="http://mp.weixin.qq.com/s/4RZz2Fdr9StFPZ91Vs9djg" target="_blank" rel="noopener">http://mp.weixin.qq.com/s/4RZz2Fdr9StFPZ91Vs9djg</a><br>按照这个安装了tensorflow</p>
+
+  </article>
+  <div class="random-toc-area">
+  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">Show TOC</button>
+  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">Hide TOC</button>
+  <div class="random-toc">
+    <h2>Table of Content</h2>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#learn-linux"><span class="toc-text">learn_linux</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Shell-命令"><span class="toc-text">Shell 命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用户及文件权限"><span class="toc-text">用户及文件权限</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Linux目录结构："><span class="toc-text">Linux目录结构：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文件操作："><span class="toc-text">文件操作：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#环境变量"><span class="toc-text">环境变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#正则表达式"><span class="toc-text">正则表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BASH语言"><span class="toc-text">BASH语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#C语言编程"><span class="toc-text">C语言编程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Vim编辑器"><span class="toc-text">Vim编辑器</span></a></li></ol>
+  </div>
+</div>
+
+  
+<nav id="pagination">
+  
+    <a href="/2019/08/11/learn_eng/" class="prev">&larr; Prev post learn_eng</a>
+  
+
+  
+
+  
+    <a href="/2019/08/10/learn_html/" class="next">Next post HTML基本语法 &rarr;</a>
+  
+</nav>
+
+  <!-- JiaThis Button BEGIN -->
+
+<!-- JiaThis Button END -->
+
+
+      
+      
+    </div>
+  </div>
+
+  <div id="bottom-outer">
+    <div id="bottom-inner">
+      Site by mujiang3 using
+      <a href="http://hexo.io">Hexo</a> & <a href="https://github.com/stiekel/hexo-theme-random">Random</a>
+      <br>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+<div id="user-card">
+  <div class="center-field">
+    <img class="avatar" src="/mujiang.jpg">
+    <p id="description"></p>
+    <ul class="social-icon">
+  
+  
+</ul>
+  </div>
+</div>
+
+
+<div id="btn-view">Hide</div>
+
+<script>
+// is trigger analytics / tongji script
+var isIgnoreHost = false;
+
+if(window && window.location && window.location.host) {
+  isIgnoreHost = ["localhost","127.0.0.1"].some(function(address){
+    return 0 === window.location.host.indexOf(address);
+  });
+}
+
+var isTriggerAnalytics = !( true && isIgnoreHost );
+
+</script>
+
+
+
+
+  
+  
+    <script src="/js/jquery-2.2.3.min.js"></script>
+  
+    <script src="/js/vegas.min.js"></script>
+  
+    <script src="/js/random.js"></script>
+  
+    <script src="/js/highlight.pack.js"></script>
+  
+    <script src="/js/jquery.mousewheel.pack.js"></script>
+  
+    <script src="/js/jquery.fancybox.pack.js"></script>
+  
+    <script src="/js/jquery.fancybox-thumbs.js"></script>
+  
+    <script src="/js/plyr.js"></script>
+  
+
+<script>
+
+  // fancybox
+  var backgroundImages = [];
+  
+  $('#post').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox') || $(this).parent().hasClass('fancybox-thumb')) return;
+      var alt = this.alt || this.title;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'post' + i);
+    });
+  });
+  $(".fancybox").fancybox();
+
+var vegasConfig = {"preload­Image":true,"transition":["flash"],"timer":true,"delay":1500000,"shuffle":true,"count":12};
+var unsplashConfig = {"gravity":"center"};
+// is show background images
+var turnoffBackgroundImage = false;
+
+
+
+
+var backgroundColor = "34495E";
+
+$(".fancybox-thumb").fancybox({
+  prevEffect: 'none',
+  nextEffect: 'none',
+  helpers: {
+    title: {
+      type: 'outside'
+    },
+    thumbs: {
+      width: 50,
+      height: 50
+    }
+  }
+});
+
+// show video with plyr
+$(".video-container iframe").each(function(i){
+  var url = $(this).attr('src');
+  var id = url.split('/').pop();
+  var plyrContainer = document.createElement('div');
+  plyrContainer.className = 'plyr';
+  var plyrElement = document.createElement('div');
+  plyrElement.dataset.videoId = id;
+  switch(true) {
+    case url.search('youtube.com') >= 0:
+      plyrElement.dataset.type = 'youtube';
+      break;
+    case url.search('vimeo.com') >= 0:
+      plyrElement.dataset.type = 'vimeo';
+      break;
+    default:
+      return;
+  };
+  plyrContainer.appendChild(plyrElement);
+  $(this).parent().html(plyrContainer);
+});
+plyr.setup('.plyr', {iconUrl: '/css/sprite.svg'});
+</script>
+</body>
+</html>
+
