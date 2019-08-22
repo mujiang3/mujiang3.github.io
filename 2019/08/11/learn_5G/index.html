@@ -16,7 +16,14 @@
   
   
   
-    <meta name="description" content="Learn 5GSMP管理流程：Preparation
+    <meta name="description" content="Learn 5G5G系统：
+
+终端
+无线接入网
+核心网
+服务
+
+SMP管理流程：Preparation
 明确任务
 与TL沟通
 技术流程
@@ -37,8 +44,7 @@ Emergency:
 客户沟通
 
 客户工作环境地点：港润酒店右手边24楼会议室A
-同事：4G，5G，IoT
-机器：电脑（贴标签的是做5G的），交换机在房...">
+同事：4G，5G，Io...">
   
   <title>learn_5G [ mujiang ]</title>
   
@@ -70,11 +76,11 @@ Emergency:
   
   
     <div class="item next">
-      <a href="/2019/08/11/learn_eng/">
+      <a href="/2019/08/11/learn_linux/">
         <div class="item-icon"></div>
       </a>
       <div class="item-title">
-        learn_eng
+        学习Linux
       </div>
     </div>
   
@@ -148,7 +154,7 @@ Emergency:
     <p class="page-title-sub">
       <span id="post-title-date">Created at 2019-08-11</span>
       
-        <span id="post-title-updated">Updated at 2019-08-15</span>
+        <span id="post-title-updated">Updated at 2019-08-21</span>
       
       
       <span id="post-title-categories">Category
@@ -173,7 +179,14 @@ Emergency:
       
     </p>
     
-    <h3 id="Learn-5G"><a href="#Learn-5G" class="headerlink" title="Learn 5G"></a>Learn 5G</h3><h4 id="SMP管理流程："><a href="#SMP管理流程：" class="headerlink" title="SMP管理流程："></a>SMP管理流程：</h4><h5 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h5><ol>
+    <h3 id="Learn-5G"><a href="#Learn-5G" class="headerlink" title="Learn 5G"></a>Learn 5G</h3><p>5G系统：</p>
+<ol>
+<li>终端</li>
+<li>无线接入网</li>
+<li>核心网</li>
+<li>服务</li>
+</ol>
+<h4 id="SMP管理流程："><a href="#SMP管理流程：" class="headerlink" title="SMP管理流程："></a>SMP管理流程：</h4><h5 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h5><ol>
 <li>明确任务</li>
 <li>与TL沟通</li>
 <li>技术流程</li>
@@ -298,6 +311,35 @@ Emergency:
 <li>ORAN：革设备商的命，19年初爱立信松口，华为依旧没有加入。</li>
 <li>唯一能够保证天线不被虚拟化，各大厂家都在加大天线投入，这两年天线厂家会经历一轮大洗牌。</li>
 </ul>
+<p>天线：</p>
+<ol>
+<li><a href="https://zhuanlan.zhihu.com/p/51098683" target="_blank" rel="noopener">天线讲解</a></li>
+<li>定向天线</li>
+<li>发射电磁波：<img src="https://pic4.zhimg.com/80/v2-b00ce93c05456fd8d1d2d58beb4b168b_hd.jpg" alt="preview"></li>
+<li>半波振子：1/2波长时效果最好，多个半波振子放在中心，水平方向能量高，削弱垂直方向</li>
+<li>定向发射：使用反射板，会有后瓣残留</li>
+<li>发射的电磁波<img src="https://pic3.zhimg.com/80/v2-f092feb326205488414be15462c31892_hd.jpg" alt="preview"></li>
+<li>增益：相对于点辐射或半波振子</li>
+<li>衰减到一半：3dB，10*log(2)，波束宽度，半功率角，3dB功率角，60°居多，角度越窄，传播越远，增益越高.  10dB是增大10倍。</li>
+<li>尽量增大前后比：缩小后瓣</li>
+<li>下部零陷：主瓣跟下旁瓣之间有空洞，所以在天线附近的信号最不好。要尽量减少，称为零点填充。</li>
+<li>垂直极化：不易产生极化电流</li>
+<li>水平极化：会在大地表面产生极化电流，会使电场信号迅速衰减</li>
+<li>双极化：45°极化，折中方案，天线集成度提高</li>
+<li>天线位置：位置太低受建筑物阻挡，位置太高又浪费，天线下倾角，物理下倾不方便，采用电子下倾：改变相位。</li>
+<li>AISG：天线接口标准组 antenna interface standards group</li>
+</ol>
+<p>UE：</p>
+<ol>
+<li>载波聚合：用多个载波传输</li>
+<li>多流传输：MIMO 多输入多输出</li>
+<li>高阶调制：同样的信号可以装入更多的数据</li>
+<li><img src="https://pic1.zhimg.com/v2-8f00a94f52796ee5dfc7de79219d7664_r.jpg" alt="preview"></li>
+<li>​</li>
+</ol>
+<p>NFV：网络功能虚拟化</p>
+<p>SDN：软件定义网络</p>
+<p>MWC：世界移动通信大会</p>
 
   </article>
   <div class="random-toc-area">
@@ -318,7 +360,7 @@ Emergency:
   
 
   
-    <a href="/2019/08/11/learn_eng/" class="next">Next post learn_eng &rarr;</a>
+    <a href="/2019/08/11/learn_linux/" class="next">Next post 学习Linux &rarr;</a>
   
 </nav>
 
