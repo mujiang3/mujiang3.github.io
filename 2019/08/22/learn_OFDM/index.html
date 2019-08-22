@@ -1,8 +1,6 @@
 
 
 
-  
-
 
 
 
@@ -18,9 +16,17 @@
   
   
   
-    <meta name="description" content>
+    <meta name="description" content="OFDMA：
+小白教程
+
+子载波间隔：LTE只有15kHZ，5G有15，30，60，120，240
+子载波：asin(t)+bsin(2t)   a和b才是要发送的信息。  在接收机乘以sin(t) ，得到a
+同步难以实现，时延会影响载波的正交性，所以OFDM在时域上难以实现
+OFDM以FFT实现，离散傅里叶变换
+OFDM传输的是频域信号
+频域来看，子载波间隔越靠近，频谱利用率越高，靠近到彼...">
   
-  <title>Tag: tool [ mujiang ]</title>
+  <title>learn_OFDM [ mujiang ]</title>
   
   
     <link rel="shortcut icon" href="/favicon.ico">
@@ -39,6 +45,15 @@
 <body>
 <div class="side-navigate hide-area">
   
+  
+    <div class="item next">
+      <a href="/2019/08/22/learn_Massive-MIMO/">
+        <div class="item-icon"></div>
+      </a>
+      <div class="item-title">
+        Massive MIMO
+      </div>
+    </div>
   
 </div>
 <div id="outer-container" class="hide-area">
@@ -71,7 +86,7 @@
           </li>
         
           
-            <li class="active">
+            <li>
           
             <a href="/tags">Tags</a>
             
@@ -103,230 +118,88 @@
     <div id="content-inner">
       
       
-  <div id="tag">
-    <h1>tool</h1>
-    
+  
+
+  <article id="post">
+    <h1>learn_OFDM</h1>
+    <p class="page-title-sub">
+      <span id="post-title-date">Created at 2019-08-22</span>
+      
+        <span id="post-title-updated">Updated at 2019-08-22</span>
+      
+      
+      <span id="post-title-categories">Category
       
       
         
+        
+        <a href="/categories/5g/">5g</a>
+      
+      </span>
       
       
-    
+      <span id="post-title-tags">
+      Tag
       
       
         
-      
-      
-    
-      
-      
         
+        <a href="/tags/5g/">5g</a>
       
+      </span>
       
+    </p>
     
-      
-      
-        
-      
-      
-    
-      
-      
-        
-          
-        
-      
-      
-      <div class="post-title-item">
-  
-  <a href="/2019/08/10/learn_blog/">
-  
-    搭建个人博客
-  
-  </a>
-  <p class="page-title-sub">
-    <span id="post-title-date">8-10</span>
-    
-    <span id="post-title-categories">Category
-    
-    
-      
-      
-      <a href="/categories/tool/">tool</a>
-    
-    </span>
-    
-    
-    <span id="post-title-tags">
-    Tag
-    
-    
-      
-      
-      <a href="/tags/tool/">tool</a>
-    
-    </span>
-    
-    
-      <br>
-      
-      
-    
-  </p>
-  
-</div>
-      
-    
-      
-      
-        
-          
-        
-      
-      
-      <div class="post-title-item">
-  
-  <a href="/2019/08/13/learn_git/">
-  
-    learn_git
-  
-  </a>
-  <p class="page-title-sub">
-    <span id="post-title-date">8-13</span>
-    
-    <span id="post-title-categories">Category
-    
-    
-      
-      
-      <a href="/categories/tool/">tool</a>
-    
-    </span>
-    
-    
-    <span id="post-title-tags">
-    Tag
-    
-    
-      
-      
-      <a href="/tags/tool/">tool</a>
-    
-    </span>
-    
-    
-      <br>
-      
-      
-    
-  </p>
-  
-</div>
-      
-    
-      
-      
-        
-          
-        
-      
-      
-      <div class="post-title-item">
-  
-  <a href="/2019/08/11/learn_linux/">
-  
-    学习Linux
-  
-  </a>
-  <p class="page-title-sub">
-    <span id="post-title-date">8-11</span>
-    
-    <span id="post-title-categories">Category
-    
-    
-      
-      
-      <a href="/categories/tool/">tool</a>
-    
-    </span>
-    
-    
-    <span id="post-title-tags">
-    Tag
-    
-    
-      
-      
-      <a href="/tags/tool/">tool</a>
-    
-    </span>
-    
-    
-      <br>
-      
-      
-    
-  </p>
-  
-</div>
-      
-    
-      
-      
-        
-      
-      
-    
-      
-      
-        
-          
-        
-      
-      
-      <div class="post-title-item">
-  
-  <a href="/2019/08/22/learn_md/">
-  
-    learn_markdown
-  
-  </a>
-  <p class="page-title-sub">
-    <span id="post-title-date">8-22</span>
-    
-    <span id="post-title-categories">Category
-    
-    
-      
-      
-      <a href="/categories/tool/">tool</a>
-    
-    </span>
-    
-    
-    <span id="post-title-tags">
-    Tag
-    
-    
-      
-      
-      <a href="/tags/tool/">tool</a>
-    
-    </span>
-    
-    
-      <br>
-      
-      
-    
-  </p>
-  
-</div>
-      
-    
+    <p>OFDMA：</p>
+<p><a href="https://blog.csdn.net/madongchunqiu/article/details/18614233" target="_blank" rel="noopener">小白教程</a></p>
+<ul>
+<li>子载波间隔：LTE只有15kHZ，5G有15，30，60，120，240</li>
+<li>子载波：asin(t)+bsin(2t)   a和b才是要发送的信息。  在接收机乘以sin(t) ，得到a</li>
+<li>同步难以实现，时延会影响载波的正交性，所以OFDM在时域上难以实现</li>
+<li>OFDM以FFT实现，离散傅里叶变换</li>
+<li>OFDM传输的是频域信号</li>
+<li>频域来看，子载波间隔越靠近，频谱利用率越高，靠近到彼此正交，然而没有互相干扰（采用的技术是正交，而不是带通滤波器）</li>
+<li>OFDM达到了理想信道的频带利用率</li>
+</ul>
+<ul>
+<li>子载波空间：从频域观察，12个小山，12个子载波</li>
+<li>frame（帧，10ms），subframe（子帧，1ms），slot（时隙）</li>
+<li>BWP：基带部分</li>
+<li>TDD：UL-DL  Uplink  Downlink</li>
+<li>5G NR： LDPC，Polar</li>
+<li>LTE：Turbo</li>
+</ul>
+<h4 id="应用场景："><a href="#应用场景：" class="headerlink" title="应用场景："></a>应用场景：</h4><ul>
+<li>超高速（eMBB）</li>
+<li>超低时延（URLLC）</li>
+<li>物联（mMTC）</li>
+</ul>
+
+  </article>
+  <div class="random-toc-area">
+  <button class="btn-hide-toc btn-hide-toc-show" style="display: none" onclick="TOCToggle()">Show TOC</button>
+  <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">Hide TOC</button>
+  <div class="random-toc">
+    <h2>Table of Content</h2>
+    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#应用场景："><span class="toc-text">应用场景：</span></a></li></ol>
   </div>
+</div>
 
   
+<nav id="pagination">
+  
+
+  
+
+  
+    <a href="/2019/08/22/learn_Massive-MIMO/" class="next">Next post Massive MIMO &rarr;</a>
+  
+</nav>
+
+  <!-- JiaThis Button BEGIN -->
+
+<!-- JiaThis Button END -->
+
 
       
       
