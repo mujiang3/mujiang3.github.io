@@ -33,9 +33,14 @@ Tx，Rx
 LDPC码：时延更小
 
 5G介绍
+SA/NSA：
+
+关键区别：有无核心网
+NSA组网下NR锚定于LTE控制面
+加腿：X2接口，将gNB与eNB连接起来
+
 基站
-BBU基带处理单元 building base band unit ：信号调制
-RRU射频拉远单元remote radio un...">
+BBU基...">
   
   <title>learn_5G [ mujiang ]</title>
   
@@ -145,7 +150,7 @@ RRU射频拉远单元remote radio un...">
     <p class="page-title-sub">
       <span id="post-title-date">Created at 2019-08-11</span>
       
-        <span id="post-title-updated">Updated at 2019-08-22</span>
+        <span id="post-title-updated">Updated at 2019-08-27</span>
       
       
       <span id="post-title-categories">Category
@@ -187,18 +192,23 @@ RRU射频拉远单元remote radio un...">
 <li>LDPC码：时延更小</li>
 </ul>
 <p><a href="https://www.jiaheu.com/topic/470866.html" target="_blank" rel="noopener">5G介绍</a></p>
+<p>SA/NSA：</p>
+<ul>
+<li>关键区别：有无核心网</li>
+<li>NSA组网下NR锚定于LTE控制面</li>
+<li>加腿：X2接口，将gNB与eNB连接起来</li>
+</ul>
 <h4 id="基站"><a href="#基站" class="headerlink" title="基站"></a>基站</h4><ul>
 <li>BBU基带处理单元 building base band unit ：信号调制</li>
 <li>RRU射频拉远单元remote radio unit：射频处理</li>
 <li>馈线：连接RRU和天线</li>
 <li>天线</li>
 </ul>
-<p>发展：</p>
-<ol>
+<h5 id="发展："><a href="#发展：" class="headerlink" title="发展："></a>发展：</h5><ol>
 <li>最开始BBU，RRU，打包到一个柜子里的</li>
 <li>RRU，BBU挂在墙上，放在机柜里</li>
 <li>RRU搬到天线附近，称之为RRU拉远   天线+RRU  D-RAN（分布式无线接入网）</li>
-<li>把BBU全部集中，变成一个BBU基带池，关在中心机房（CO）</li>
+<li>把BBU全部集中，变成一个BBU基带池，关在中心机房（CO），C-RAN</li>
 <li>共享数据，小区协作（CoMP），提高频谱效率，提升用户感知</li>
 <li>多点协作传输（CoMP），PDSCH为终端数据传输，PUSCH联合接收终端发送数据</li>
 <li>NFV（网元功能虚拟化）：用X86服务器，装个虚拟机，运行具备BBU功能的软件</li>
@@ -218,6 +228,22 @@ RRU射频拉远单元remote radio un...">
 <p>NFV：网络功能虚拟化</p>
 <p>SDN：软件定义网络</p>
 <p>MWC：世界移动通信大会</p>
+<h5 id="频段："><a href="#频段：" class="headerlink" title="频段："></a>频段：</h5><p>清退后的2.6GHz也是5G优势频段。完整的2600MHz包括A频段（2500MHz<del>2555MHz）、B频段（2555MHz</del>2575MHz）、C频段（2575MHz<del>2635MHz）、D频段（2635MHz</del>2655MHz）和E频段（2655MHz~2690MHz）等五个连续频段共计190MHz</p>
+<p>频率资源：<img src="http://mmbiz.qpic.cn/mmbiz_png/pUm6Hxkd434JjbdsYJJv5zibg6QnEZb6aiacpibvibnnupAKa604JKxkt4a00icIFtUkhtumaR8xN1fLIg8yBiax9udQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="img"></p>
+<p>频率越低，穿透性越强，传输距离越远。</p>
+<p>wifi：2.4G和5G</p>
+<p>5G：</p>
+<ul>
+<li>FR1：450MHZ-6000MHZ   sub-6GHZ   低于6GHZ</li>
+<li>FR2：从 24250MHz 到 52600MHz   24GHZ到52GHZ   毫米波频段</li>
+<li>每个频段，都有一个频段号，是以“n”开头的</li>
+<li>4G LTE对频段的划分方法，是以“B（Bands）”开头的频段号</li>
+<li>4G最大带宽20MHZ，5G最大带宽：100MHZ（C-band频段），400MHZ（毫米波频段）</li>
+</ul>
+<p>2.6GHZ：</p>
+<ul>
+<li>完整的2600MHZ包括A频段，B频段，C频段，D频段，E频段</li>
+</ul>
 
   </article>
   <div class="random-toc-area">
@@ -225,7 +251,7 @@ RRU射频拉远单元remote radio un...">
   <button class="btn-hide-toc btn-hide-toc-hide" onclick="TOCToggle()">Hide TOC</button>
   <div class="random-toc">
     <h2>Table of Content</h2>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Learn-5G"><span class="toc-text">Learn 5G</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5G-RAN-System"><span class="toc-text">5G RAN System</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#基站"><span class="toc-text">基站</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Learn-5G"><span class="toc-text">Learn 5G</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#5G-RAN-System"><span class="toc-text">5G RAN System</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#基站"><span class="toc-text">基站</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#发展："><span class="toc-text">发展：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#频段："><span class="toc-text">频段：</span></a></li></ol></li></ol></li></ol>
   </div>
 </div>
 
